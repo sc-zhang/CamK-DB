@@ -1,5 +1,5 @@
 ## Introduction
-TeaDB is a minhash fingerprint database of tea plants which contain fingerprints of 735 samples.
+CamK-DB is a kmer-based minhash fingerprint database of Camellia plants which contain fingerprints of 735 samples.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15588935.svg)](https://doi.org/10.5281/zenodo.15588935)
 
@@ -24,7 +24,7 @@ DB file could be found in following links:
 2. move database file "Tea.db" into db folder.  
 ![](images/step2.png)
 
-3. double click "TeaDB.exe".  
+3. double click "CamK_Db.exe".  
 ![](images/step3.png)
 
 4. click <kbd>Select</kbd> button, select "jac" file created by [mike](https://github.com/Argonum-Clever2/mike).  
@@ -42,8 +42,8 @@ DB file could be found in following links:
 ### Installation
 1. Install the query program
 ```bash
-git clone https://github.com/sc-zhang/TeaDB.git
-cd TeaDB/src
+git clone https://github.com/sc-zhang/CamK-DB.git
+cd CamK-DB/src
 make install PREFIX=/path/to/install
 ```
 

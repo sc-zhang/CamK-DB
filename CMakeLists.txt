@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(TeaDB)
+project(CamK_Db)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
@@ -15,7 +15,7 @@ if(WIN32)
         set(SQLite3_LIBRARY_DIR ${SQLite3_PATH}/lib)
         set(SQLite3_LIBRARY sqlite3.dll)
         set(CMAKE_WIN32_EXECUTABLE ON)
-        set(CMAKE_INSTALL_PATH "TeaDB")
+        set(CMAKE_INSTALL_PATH "CamK_Db")
         if(MSVC)
                 set(QT_PATH "D:/Qt/6.9.0/msvc2022_64")
                 add_compile_options("/permissive-")
@@ -38,7 +38,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(TeaDB src/main.cpp
+add_executable(CamK_Db src/main.cpp
         src/teadbgui.h
         src/ui_teadbgui.h
         src/teadbgui.cpp
@@ -50,38 +50,39 @@ add_executable(TeaDB src/main.cpp
         src/qwaiting.ui
         resources/logo.rc)
 if(LINUX)
-  target_link_libraries(TeaDB
+  target_link_libraries(CamK_Db
           sqlite3
           Qt::Widgets
   )
 else()
-  target_link_libraries(TeaDB
+  target_link_libraries(CamK_Db
           SQLite3
           Qt::Widgets
   )
 endif()
 
 if(WIN32)
-        target_include_directories(TeaDB PRIVATE ${SQLite3_INCLUDE_DIRS})
-        target_link_directories(TeaDB PRIVATE ${SQLite3_LIBRARY_DIR})
-        target_link_libraries(TeaDB ${SQLite3_LIBRARIES})
+        target_include_directories(CamK_Db PRIVATE ${SQLite3_INCLUDE_DIRS})
+        target_link_directories(CamK_Db PRIVATE ${SQLite3_LIBRARY_DIR})
+        target_link_libraries(CamK_Db ${SQLite3_LIBRARIES})
 endif()
 
 if(WIN32)
-        set(TEADB_DIR ${CMAKE_BINARY_DIR}/TeaDB)
-        install(TARGETS TeaDB DESTINATION ${TEADB_DIR})
-        install(DIRECTORY resources DESTINATION ${TEADB_DIR})
+        set(CamK_DB_DIR ${CMAKE_BINARY_DIR}/CamK_Db)
+        install(TARGETS CamK_Db DESTINATION ${CamK_DB_DIR})
+        install(DIRECTORY resources DESTINATION ${CamK_DB_DIR})
+        file(MAKE_DIRECTORY ${CamK_DB_DIR}/db)
         install(FILES "${QT_PATH}/bin/Qt6Core.dll"
                 "${QT_PATH}/bin/Qt6Gui.dll"
                 "${QT_PATH}/bin/Qt6Widgets.dll"
                 "${SQLite3_LIBRARY_DIR}/sqlite3.dll"
-                DESTINATION ${TEADB_DIR})
+                DESTINATION ${CamK_DB_DIR})
         if(MINGW)
-                install(FILES "${QT_PATH}/bin/libstdc++-6.dll" DESTINATION ${TEADB_DIR})
+                install(FILES "${QT_PATH}/bin/libstdc++-6.dll" DESTINATION ${CamK_DB_DIR})
                 if(EXISTS "${MINGW_PATH}/bin/libssp-0.dll")
-                        install(FILES "${MINGW_PATH}/bin/libssp-0.dll" DESTINATION ${TEADB_DIR})
+                        install(FILES "${MINGW_PATH}/bin/libssp-0.dll" DESTINATION ${CamK_DB_DIR})
                 endif()
         endif()
-        install(FILES "${QT_PATH}/plugins/imageformats/qgif.dll" DESTINATION "${TEADB_DIR}/imageformats")
-        install(FILES "${QT_PATH}/plugins/platforms/qwindows.dll" DESTINATION "${TEADB_DIR}/platforms")
+        install(FILES "${QT_PATH}/plugins/imageformats/qgif.dll" DESTINATION "${CamK_DB_DIR}/imageformats")
+        install(FILES "${QT_PATH}/plugins/platforms/qwindows.dll" DESTINATION "${CamK_DB_DIR}/platforms")
 endif()

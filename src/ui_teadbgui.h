@@ -80,7 +80,7 @@ public:
 
     void retranslateUi(QWidget *TeaDbGui)
     {
-        TeaDbGui->setWindowTitle(QCoreApplication::translate("TeaDbGui", "TeaDb", nullptr));
+        TeaDbGui->setWindowTitle(QCoreApplication::translate("TeaDbGui", "CamK-DB", nullptr));
         btnSelect->setText(QCoreApplication::translate("TeaDbGui", "Select", nullptr));
         btnQuery->setText(QCoreApplication::translate("TeaDbGui", "Query", nullptr));
     } // retranslateUi
