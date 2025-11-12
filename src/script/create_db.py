@@ -27,7 +27,7 @@ def create_db(jac_dir, info_list, out_db):
     name_db = {}
 
     print("Create information table")
-    sql = "CREATE TABLE tea_info(id text primary key not null, name text no null, englishname text not null, species text not null, groups text not null, country text not null, area text not null);"
+    sql = "CREATE TABLE tea_info(id text primary key not null, name text not null, englishname text not null, species text not null, groups text not null, country text not null, area text not null);"
     cur.execute(sql)
 
     print("Inserting sample informations")
