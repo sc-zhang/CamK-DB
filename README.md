@@ -1,15 +1,15 @@
 ## Introduction
 CamK-DB is a kmer-based minhash fingerprint database of Camellia plants which contain fingerprints of 735 samples.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15588935.svg)](https://doi.org/10.5281/zenodo.15588935)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17585882.svg)](https://doi.org/10.5281/zenodo.17585882)
 
 ## GUI version
 
 ### Installation
 1. Install prebuild GUI program  
 Download file in release
-- https://github.com/sc-zhang/TeaDB/releases/download/v1.0.0/TeaDB_v1.0.0.zip
-- https://zenodo.org/records/15588935/files/TeaDB_v1.0.0.zip?download=1
+- https://github.com/sc-zhang/CamK-DB/releases/download/v1.0.1/CamK_Db_v1.0.1.zip
+- https://zenodo.org/records/17585931/files/CamK_Db_v1.0.1.zip?download=1
 
 2. Download the database file  
 DB file could be found in following links:  
