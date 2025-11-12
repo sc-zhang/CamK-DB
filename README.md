@@ -1,7 +1,7 @@
 ## Introduction
 CamK-DB is a kmer-based minhash fingerprint database of Camellia plants which contain fingerprints of 735 samples.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17585882.svg)](https://doi.org/10.5281/zenodo.17585882)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17585931.svg)](https://doi.org/10.5281/zenodo.17585931)
 
 ## GUI version
 
