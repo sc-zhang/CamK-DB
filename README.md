@@ -1,5 +1,5 @@
 ## Introduction
-TeaDB is a minhash fingerprint database of tea plants which contain fingerprints of 736 samples.
+TeaDB is a minhash fingerprint database of tea plants which contain fingerprints of 735 samples.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15588935.svg)](https://doi.org/10.5281/zenodo.15588935)
 
@@ -11,7 +11,7 @@ Download file in release
 - https://github.com/sc-zhang/TeaDB/releases/download/v1.0.0/TeaDB_v1.0.0.zip
 - https://zenodo.org/records/15588935/files/TeaDB_v1.0.0.zip?download=1
 
-3. Download the database file  
+2. Download the database file  
 DB file could be found in following links:  
 - Google Drive: https://drive.google.com/file/d/1WPO6K8IXk2nMA-d9qsq8yLLAtaialy-R/view?usp=drive_link
 - Baidu Netdisk: https://pan.baidu.com/s/1fX09tspOvR5jJ_W5Acz_gg?pwd=rzb9
