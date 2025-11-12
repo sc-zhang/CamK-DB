@@ -50,7 +50,7 @@ def create_db(jac_dir, info_list, out_db):
     print("Creating tables by group")
     for group in group_set:
         sql = (
-            "CREATE TABLE %s(id text primary key not null,name text not null,similarity not null,foreign key(id) references tea(id));"
+            "CREATE TABLE %s(id text primary key not null,name text not null,similarity not null,foreign key(id) references tea_info(id));"
             % (group.replace(".", "_"))
         )
         cur.execute(sql)
